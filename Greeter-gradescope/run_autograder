@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+set -eu -o pipefail
+shopt -s failglob
+
+# Gradle Version
+GRADLE_VER=7.5.1
+
+export PATH=/opt/gradle-$GRADLE_VER/bin:$PATH
+
+cp -r /autograder/submission/Greeter /autograder/source
+
+cd /autograder/source/Greeter
+
+gradle clean build
+
+mv results.json /autograder/results
