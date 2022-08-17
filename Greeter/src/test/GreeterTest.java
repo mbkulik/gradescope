@@ -5,6 +5,9 @@ import org.junit.jupiter.api.extension.ExtendWith;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import edu.unh.cs.grader.Grader;
+import edu.unh.cs.grader.Rubric;
+
 @ExtendWith(Grader.class)
 public class GreeterTest {
 

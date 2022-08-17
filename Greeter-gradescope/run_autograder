@@ -16,8 +16,6 @@ cp -rf /autograder/source/test /autograder/source/Greeter/src
 
 cd /autograder/source/Greeter
 
-gradle -Dtest.ignoreFailures=true -Dtest.failFast=false clean build  
+gradle -Dtest.ignoreFailures=true -Dtest.failFast=false clean build
 
 mv results.json /autograder/results
- 
- []

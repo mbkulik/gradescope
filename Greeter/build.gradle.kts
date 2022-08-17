@@ -20,8 +20,7 @@ java {
 dependencies {
   implementation("org.apache.commons:commons-lang3:3.12.0")
   testImplementation("org.junit.jupiter:junit-jupiter:5.8.2")
-  testImplementation("org.junit.jupiter:junit-jupiter-engine:5.8.2")
-  testImplementation("com.google.code.gson:gson:2.9.1")
+  testImplementation(files("libs/CSGrader.jar"))
 }
 
 tasks.getByName<Test>("test") {
