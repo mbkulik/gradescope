@@ -15,6 +15,7 @@ rm -rf /autograder/source/Greeter/src/test
 cp -rf /autograder/source/test /autograder/source/Greeter/src
 
 cd /autograder/source/Greeter
+rm -f results.json
 
 gradle -Dtest.ignoreFailures=true -Dtest.failFast=false clean build
 
