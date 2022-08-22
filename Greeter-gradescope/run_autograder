@@ -10,11 +10,14 @@ export PATH=/opt/gradle-$GRADLE_VER/bin:$PATH
 
 cp -r /autograder/submission/Greeter /autograder/source
 
+
 # Copy un-altered test cases to env
 rm -rf /autograder/source/Greeter/src/test
 cp -rf /autograder/source/test /autograder/source/Greeter/src
 
 cd /autograder/source/Greeter
+# Delete students local results.json or out of date results.json
+rm -f results.json
 
 gradle -Dtest.ignoreFailures=true -Dtest.failFast=false clean build
 
