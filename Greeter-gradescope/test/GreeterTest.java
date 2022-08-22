@@ -7,12 +7,12 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @ExtendWith(Grader.class)
 public class GreeterTest {
-    // THIS IS THE RIGHT ONE!
+
     @Test
     @Rubric(description="testSayHello()", points=50)
     public void testSayHello() {
         Greeter g = new Greeter();
-        assertEquals("Hello World", g.sayHello());
+        assertEquals("Hello World!", g.sayHello());
     }
 
     @Test

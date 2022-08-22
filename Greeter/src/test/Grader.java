@@ -15,6 +15,7 @@ public class Grader implements TestWatcher, AfterAllCallback {
         String name;
         String visibility;
         String stdout_visibility; 
+        String output;
         int score;
         int max_score;
     }
@@ -59,6 +60,9 @@ public class Grader implements TestWatcher, AfterAllCallback {
             t.max_score = r.points();
             t.visibility = r.visibility();
             t.stdout_visibility = r.stdout_visibility();
+            if (cause != null && t.stdout_visibility.equalsIgnoreCase("visible")) {
+                t.output = cause.getMessage();
+            }
             suite.tests.add(t);
         }
     }
