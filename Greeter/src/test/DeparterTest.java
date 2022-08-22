@@ -9,13 +9,12 @@ import edu.unh.cs.grader.Grader;
 import edu.unh.cs.grader.Rubric;
 
 @ExtendWith(Grader.class)
-public class GreeterTest {
+public class DeparterTest{
 
     @Test
-    @Rubric(description="testSayHello()", points=50)
-    public void testSayHello() {
+    @Rubric(description="testSayGoodbye()", points=50)
+    public void testSayGoodbye() {
         Greeter g = new Greeter();
-        assertEquals("Hello World", g.sayHello());
+        assertEquals("Goodbye World!", g.sayGoodbye());
     }
-
 }
